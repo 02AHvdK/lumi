@@ -1,0 +1,10 @@
+*.exe
+*.pdb
+*.log
+*.zip
+bin/
+obj/
+.vs/
+test-results/
+tray-icon.png
+*.tmp
