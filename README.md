@@ -8,7 +8,7 @@ Windows x64 本地屏幕调节工具。
 - 三款内置托盘图标与自动系统主题配色。
 - 统一对齐与留白，支持原生毛玻璃和系统圆角。
 
-下载 `lumi-windows-x64.zip`，解压后运行 `lumi.exe`。
+下载 `lumi.zip`，解压后运行 `lumi.exe`。
 
 推荐 Windows 11 x64，.NET Framework 4.8。EXE 未签名。DDC/CI、HDR 和毛玻璃效果依赖硬件与系统支持；不保证所有设备兼容
 <img width="1000" height="780" alt="demo" src="https://github.com/user-attachments/assets/faf8f42c-13b2-4892-b81f-f5abd9c6609a" />
