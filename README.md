@@ -1,4 +1,4 @@
-# lumi 
+# Lumi 
 
 Windows x64 本地屏幕调节工具。
 
