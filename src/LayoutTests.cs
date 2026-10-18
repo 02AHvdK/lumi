@@ -67,7 +67,7 @@ namespace lumi
     Check(Views.Get<ScrollViewer>(w,"DisplayPage").IsVisible,"return button opens display");
     Views.Get<Button>(w,"Maximize").RaiseEvent(new RoutedEventArgs(Button.ClickEvent));Check(w.WindowState==WindowState.Maximized,"maximize handler");
     Views.Get<Button>(w,"Maximize").RaiseEvent(new RoutedEventArgs(Button.ClickEvent));Check(w.WindowState==WindowState.Normal,"restore handler");
-    var q=Views.Load("QuickWindow.xaml"); q.DataContext=service;Desktop.Configure(q,true);q.Height=226;q.Show();q.UpdateLayout();
+    var q=Views.Load("QuickWindow.xaml"); q.DataContext=service;Desktop.Configure(q,true);Views.SetIcon(q);Check(Views.Get<Image>(q,"Logo").Source!=null,"quick panel loads embedded app logo");q.Height=226;q.Show();q.UpdateLayout();
     Check(((System.Windows.Controls.Border)q.Content).CornerRadius.TopLeft==0,"quick shell delegates corners to DWM");
     int corner;
     Check(Desktop.DwmGetWindowAttribute(new WindowInteropHelper(q).Handle,33,out corner,4)==0 && corner==2,"quick native round-corner preference accepted");

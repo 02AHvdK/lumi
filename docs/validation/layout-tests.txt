@@ -28,6 +28,7 @@ PASS icon options have no motion wiring
 PASS return button opens display
 PASS maximize handler
 PASS restore handler
+PASS quick panel loads embedded app logo
 PASS quick shell delegates corners to DWM
 PASS quick native round-corner preference accepted
 PASS main native round-corner preference accepted
