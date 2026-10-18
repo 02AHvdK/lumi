@@ -1,17 +1,41 @@
-# Lumi 
+# lumi
 
-Windows x64 本地屏幕调节工具。
+Windows x64 本地屏幕调节工具。当前版本：**Material 3 层级与圆角修订版 · 2026-10-19**。
 
-- 多屏亮度控制，可选联动与预设。
-- 按设备能力提供硬件对比度和 HDR 控制。
-- 精简托盘快捷面板，支持悬停和点击呼出。
-- 三款内置托盘图标与自动系统主题配色。
-- 统一对齐与留白，支持原生毛玻璃和系统圆角。
+[下载最新便携包](https://github.com/02AHvdK/lumi/raw/refs/heads/main/lumi.zip) · [使用指南](lumi%20使用指南.md) · [更新说明](docs/更新说明-2026-10-19.md)
 
-下载 `lumi.zip`，解压后运行 `lumi.exe`。
+解压后运行 `lumi.exe`。更新前请通过托盘右键菜单退出旧版本。推荐 Windows 11 x64、.NET Framework 4.8；EXE 未签名。DDC/CI、HDR 与原生圆角支持取决于设备和 Windows 环境。
 
-推荐 Windows 11 x64，.NET Framework 4.8。EXE 未签名。DDC/CI、HDR 和毛玻璃效果依赖硬件与系统支持；不保证所有设备兼容
-<img width="1000" height="780" alt="demo" src="https://github.com/user-attachments/assets/faf8f42c-13b2-4892-b81f-f5abd9c6609a" />
-<img width="980" height="710" alt="main" src="https://github.com/user-attachments/assets/2622f566-6e9d-44e2-af62-5ca13da98323" />
-<img width="980" height="710" alt="settings" src="https://github.com/user-attachments/assets/bb63af45-2af3-4890-bc2b-4d9b02f4427b" />
-<img width="310" height="218" alt="quick" src="https://github.com/user-attachments/assets/9cf1e3ee-7b18-41cb-8c60-0e3568a7cc15" />
+## 功能
+
+- 多屏亮度、加减微调、预设与可选联动；按设备能力提供对比度和 HDR。
+- 托盘悬停或点击呼出快捷面板；按图标位置、工作区与 DPI 定位。
+- Material 3 风格，跟随系统／浅色／深色主题，系统或自选强调色。
+- 三款托盘图标、登录启动与诊断导出。
+- 硬件信息按设备分组，连接详情与原始诊断折叠显示。
+
+## 界面预览
+
+当前版本 WPF 渲染截图使用模拟设备数据，不包含桌面合成器的原生裁切与阴影。
+
+### 屏幕调节
+![屏幕调节](main.png)
+
+### 外观设置
+![外观设置](settings.png)
+
+### 硬件信息
+![硬件信息](hardware.png)
+
+### 快捷面板
+![快捷面板](quick.png)
+
+## 构建与验证
+
+在 Windows PowerShell 执行 `./src/build.ps1`，生成 `src/lumi.exe`。使用系统 .NET Framework 编译器，不依赖浏览器运行时。
+
+[55 项自动检查通过](docs/validation/layout-tests.txt)，包含布局、按钮处理、主题保存、硬件分组、托盘定位计算和 DWM 圆角参数。使用模拟屏幕，零硬件写入。实际鼠标全流程、混合 DPI 桌面和原生圆角视觉效果尚未人工验证。
+
+回归入口：`./src/lumi.exe --layout-test C:/Temp/lumi-layout-check`。测试会临时保存并恢复主题设置，请勿与另一个 lumi 实例同时运行。`--test` 与 `--ui-test` 会操作真实设备，不属于上述零写入检查。
+
+`demo.gif` 为旧版历史演示，不代表当前 UI。Material 3 为 WPF 风格适配，并非 Google 官方组件库，也未声称使用官方 HCT 配色算法。

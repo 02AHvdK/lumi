@@ -1,0 +1,55 @@
+PASS bottom taskbar placement at DPI 96
+PASS icon center alignment at DPI 96
+PASS bottom taskbar placement at DPI 120
+PASS icon center alignment at DPI 120
+PASS bottom taskbar placement at DPI 144
+PASS icon center alignment at DPI 144
+PASS bottom taskbar placement at DPI 192
+PASS icon center alignment at DPI 192
+PASS left taskbar opens inward
+PASS top taskbar opens downward
+PASS right taskbar opens inward
+PASS Close native hit is client area
+PASS Close has stable hit target
+PASS Maximize native hit is client area
+PASS Maximize has stable hit target
+PASS Minimize native hit is client area
+PASS Minimize has stable hit target
+PASS link and restore do not overlap at 760
+PASS link receives pointer at 760
+PASS preset fits at 760
+PASS link and restore do not overlap at 620
+PASS link receives pointer at 620
+PASS preset fits at 620
+PASS hardware grouped by device plus system
+PASS main shell delegates corners to DWM
+PASS settings button opens page
+PASS icon options have no motion wiring
+PASS return button opens display
+PASS maximize handler
+PASS restore handler
+PASS quick shell delegates corners to DWM
+PASS quick native round-corner preference accepted
+PASS main native round-corner preference accepted
+PASS slider has no rectangular focus outline
+PASS preset remains stationary
+PASS screen list expands without height cap
+PASS screen list has no internal scrollbar
+PASS display page has no visible scrollbar
+PASS invalid theme preferences fall back to system
+PASS dark theme button applies immediately
+PASS accent selection persisted
+PASS main and quick share selected theme
+PASS light theme button applies immediately
+PASS system theme selection
+PASS multi-display panel height capped
+PASS main plus handler increments one percent
+PASS main minus handler decrements one percent
+PASS quick plus handler updates shared model
+PASS quick minus handler updates shared model
+PASS quick upper clamp
+PASS quick lower clamp
+PASS minimum window content scrolls
+PASS restore reachable at minimum window height
+PASS zero hardware writes
+PASS close handler
