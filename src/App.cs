@@ -151,7 +151,7 @@ namespace lumi
             outside = DateTime.MinValue;
             Quick = new QuickView(Service, this);
             var w = Quick.Window;
-            w.Height = Math.Min(430, 112 + Math.Max(1, Service.Screens.Count) * 114);
+            w.Height = Math.Min(430, 66 + Math.Max(1, Service.Screens.Count) * 80);
             w.ShowActivated = activate;
             new WindowInteropHelper(w).EnsureHandle();
             Desktop.Place(w, Tray.Anchor());

@@ -386,7 +386,7 @@ namespace lumi
             Views.Click(Window, "OpenMain", () => host.ShowMain());
             Action resize = delegate
             {
-                Window.Height = Math.Min(430, 112 + Math.Max(1, service.Screens.Count) * 114);
+                Window.Height = Math.Min(430, 66 + Math.Max(1, service.Screens.Count) * 80);
                 if (Window.IsVisible) Desktop.Place(Window, host.Tray.Anchor());
                 Views.WheelSliders(Window);
             };

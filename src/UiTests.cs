@@ -128,7 +128,7 @@ namespace lumi
             await Task.Delay(200);
             Check(host.Quick != null && host.Quick.Window.IsVisible, "click opens quick panel", log);
             Check(Object.ReferenceEquals(w.DataContext, host.Quick.Window.DataContext), "main and quick panel share a single state service", log);
-            Check(host.Quick.Window.Width == 360 && host.Quick.Window.Height == Math.Min(430, 112 + Math.Max(1, service.Screens.Count) * 114), "compact panel adapts to screen count (" + host.Quick.Window.Width + "x" + host.Quick.Window.Height + ")", log);
+            Check(host.Quick.Window.Width == 310 && host.Quick.Window.Height == Math.Min(430, 66 + Math.Max(1, service.Screens.Count) * 80), "compact panel adapts to screen count (" + host.Quick.Window.Width + "x" + host.Quick.Window.Height + ")", log);
             Check(host.Quick.Window.FindName("P25") == null, "quick panel contains no preset clutter", log);
             try
             {

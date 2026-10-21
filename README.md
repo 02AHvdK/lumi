@@ -1,12 +1,14 @@
 # lumi
 
-Windows x64 本地屏幕调节工具。当前版本：**界面与硬件信息更新 · 2026-10-19**。
+Windows x64 本地屏幕调节工具。当前版本：**快捷面板精简更新 · 2026-10-21**。
 
-[下载最新便携包](https://github.com/02AHvdK/lumi/raw/refs/heads/main/lumi.zip) · [使用指南](lumi%20使用指南.md) · [更新说明](docs/更新说明-2026-10-19.md)
+[下载最新便携包](https://github.com/02AHvdK/lumi/raw/refs/heads/main/lumi.zip) · [使用指南](lumi%20使用指南.md) · [更新说明](docs/更新说明-2026-10-21.md)
 
 解压后运行 `lumi.exe`。更新前请通过托盘右键菜单退出旧版本。推荐 Windows 11 x64、.NET Framework 4.8；EXE 未签名。DDC/CI、HDR 与原生圆角支持取决于设备和 Windows 环境。
 
 ## 本次更新
+
+- 缩小快捷面板，精简重复文字，将主界面入口移至右上角。
 
 - 修复快捷面板未显示应用 Logo 的问题。
 
